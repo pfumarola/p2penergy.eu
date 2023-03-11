@@ -61,18 +61,22 @@ class World {
   }
 
   goTo(targetIndex) {
-    gsap.to(camera.position, {
-      x: 0,
-      y: 100,
-      z: 100,
-      duration: 2
-    })
+    this.resetView()
     gsap.to(camera.position, {
       x: this.cubes[targetIndex-1].position.x,
       y: this.cubes[targetIndex-1].position.y,
       z: this.cubes[targetIndex-1].position.z,
       duration: 3,
       delay: 2
+    })
+  }
+
+  resetView() {
+    gsap.to(camera.position, {
+      x: 0,
+      y: 100,
+      z: 100,
+      duration: 2
     })
   }
 

@@ -2,6 +2,7 @@
   <div class="wrapper">
     <div class="controls">
       <button v-for="n in [1,2,3,4,5]" :key="n" @click="world.goTo(n)">{{ n }}</button>
+      <button @click="world.resetView()">Reset vista</button>
       <button @click="world.logCamera()">Camera Log</button>
     </div>
     <div id="scene-container" ref="sceneContainer"></div>
